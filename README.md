@@ -1,30 +1,9 @@
-# React + TypeScript + Vite
+1) Приложение не рассчитано для мобильных версий! Минимальная ширина экрана - 740px.
+2) В идеале можно было бы использовать стейт менеджеры (MobX, например) + localstore для сохранения состояний.
+! Первый и второй пункт не были озвучены в условиях выполнения задачи, поэтому они и не выполнены (но сделать их не составит большого труда) 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+По моему мнению ключевой функцилнальностью явлется добавление ToDo в список, поэтому именно эту логику я покрыл тестами (двумя)
+Первый тест проверят, добалвяется ли в список ToDo, когда пользователь вводит что-то в input и нажимает на кнопку добавления
+Второй тест проверяет, что в список ничего не добавляется, когда мы ничего не вводим в input, но нажимаем на кнопку добавления
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Остальные детали смотрите в коде ;)
